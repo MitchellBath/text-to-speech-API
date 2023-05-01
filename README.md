@@ -12,6 +12,7 @@ Usage
 To start the server, run the following command:
 
 node app.js
+
 By default, the server will run on http://localhost:3000/. You can access the landing page for the text-to-speech API by navigating to that URL in your web browser.
 
 On the landing page, you can enter the text you want to convert to speech and select a voice model. Once you submit the form, the server will redirect you to a page that plays the synthesized speech.
