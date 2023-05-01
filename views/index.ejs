@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Input Page</title>
+  </head>
+  <body>
+    <h1>Text-to-Speech API by Mitch Bath for ITIS6177</h1><h3>Using Microsoft Azure's Text-To-Speech API</h3>
+    <br><br>
+    <h1>Enter Text for speech synthesis here:</h1>
+    <form action="/synthesize" method="POST">
+      <input type="text" name="text" id="text" placeholder="Enter text here" required>
+      <br><br>
+      <%if(voices.length) {%>
+        <label for="voice">Select a voice: </label>
+        <select id="voice" name="voice">
+          <% voices.forEach(voice => { %>
+            <option value="<%=voice%>"><%=voice%></option>
+          <% })%>
+        </select>
+      <%}%>
+      <br><br>
+      <input class="submit" type="submit" value="Submit">
+    </form>
+    <br><br><br>
+    <h2><a href='/docs'>Check out the documentation!</a></h2>
+  </body>
+</html>
